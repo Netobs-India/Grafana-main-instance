@@ -1,0 +1,12 @@
+replicaCount: 1
+namespace: monitoring
+image:
+  repository: grafana/grafana
+  tag: latest
+service:
+  type: NodePort
+  port: 3000
+  targetPort: 3000
+  nodePort: 30082
+env:
+  adminPassword: admin123@net
